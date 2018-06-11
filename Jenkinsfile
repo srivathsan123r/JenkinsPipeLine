@@ -1,14 +1,15 @@
 pipeline {
   agent any
   stages {
-    stage('') {
+    stage('Build') {
       steps {
-        sh 'echo $testbed'
+        sh '''echo $testbed
+echo $vcd_build'''
       }
     }
   }
   environment {
     vcd_build = '12345'
-    tesbed = 'testbed.json'
+    testbed = 'testbed.json'
   }
 }
